@@ -183,7 +183,7 @@ public class Encrypt extends JFrame implements ActionListener{
                     //now add to database our file.
                     try{
                         Class.forName("com.mysql.cj.jdbc.Driver");
-                        Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/file_enc_sys", "root","12345678");
+                        Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/file_enc_sys", "","");
                         
                         //limit on packet size is 1MB
                         String querySetLimit="SET GLOBAL max_allowed_packet=104857600";//10 MB
