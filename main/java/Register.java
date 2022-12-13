@@ -123,7 +123,7 @@ public class Register extends JFrame implements ActionListener,MouseListener{
             else{
                 try{
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/file_enc_sys","root","12345678");
+                    Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/file_enc_sys","","");
                     PreparedStatement st=conn.prepareStatement("select user_id,name,password from user_data where user_id=?;");
                     st.setInt(1,input_id);
 
