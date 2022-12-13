@@ -132,7 +132,7 @@ public class Decrypt extends JFrame implements ActionListener{
                  */
                 try{
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/file_enc_sys","root","12345678");
+                    Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/file_enc_sys","","");
                     PreparedStatement check=conn.prepareStatement("select user_id from uploads where file_id=?");
                     check.setInt(1, ip_file_id);
                     ResultSet r=check.executeQuery();
