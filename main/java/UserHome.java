@@ -94,7 +94,7 @@ public class UserHome extends JFrame implements java.awt.event.ActionListener{
 
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/file_enc_sys","root","12345678");
+            Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/file_enc_sys","","");
             PreparedStatement st=conn.prepareStatement("select file_id,file_name,description from uploads where user_id=?");
             st.setInt(1,user_id);
             ResultSet rs=st.executeQuery();
